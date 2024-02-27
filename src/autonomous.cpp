@@ -9,7 +9,7 @@ namespace Auton
     }
     double velocity(double time, double dist, double max_speed, double acceleration)
     {
-        dist *= 48 / 36;
+        dist *= GEAR_RATIO;
         max_speed *= MAX_SPEED;
         acceleration *= MAX_SPEED;
         double velocity = 0;
@@ -146,7 +146,6 @@ namespace Auton
     }
     void turnLeft(double angle, double max_speed, double acceleration)
     {
-        angle *= 36/48;
         double time = 0;
         double speed = 0;
         double direction = 1;
@@ -193,10 +192,3 @@ namespace Auton
         leftDrive.brake();
         rightDrive.brake();
     }
-   // void roller(){
-   //     rollerMotor.move_velocity(200);
-   //     pros::delay(400);
-   //     rollerMotor.brake();
-   // }
-
-}
