@@ -192,9 +192,3 @@ namespace Auton
         leftDrive.brake();
         rightDrive.brake();
     }
-    void roller(){
-        rollerMotor.move_velocity(200);
-        pros::delay(400);
-        rollerMotor.brake();
-    }
-}
